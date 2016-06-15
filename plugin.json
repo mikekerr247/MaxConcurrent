@@ -1,0 +1,27 @@
+{
+  "name": "MaxConcurrent",
+  "version": "0.1.0",
+  "description": "Reports maximum concurrent visitors in a time interval",
+  "theme": false,
+  "require": {
+    "piwik": ">=2.16.1"
+  },
+  "support": {
+    "email": "mikekerr247@hotmail.com",
+    "issues": "https://github.com/mikekerr247/MaxConcurrent/issues",
+    "wiki": "https://github.com/mikekerr247/MaxConcurrent/wiki"
+  },
+  "donate": {
+    "paypal": "mikekerr247@hotmail.com" 
+  },
+  "authors": [
+    {
+      "name": "Michael Kerr",
+      "email": "mikekerr247@hotmail.com",
+      "homepage": "http://github.com/mikekerr247"
+    }
+  ],
+  "homepage": "http://github.com/mikekerr247/MaxConcurrent",
+  "license": "GPL v3+",
+  "keywords": []
+}
