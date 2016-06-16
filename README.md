@@ -4,13 +4,12 @@
 
 This is a plugin for the Open Source Web Analytics platform Piwik. If enabled, it will add three new widgets that you can add to your dashboard.
 
-At the moment the plugin defaults to concurrent usage over a 5 minute time interval for the last 200 days. These numbers can be reconfigured in
-the plugin settings page of the user profile menu.
+At the moment the plugin defaults to maximum concurrent usage for every 5 minute time interval for the last 200 days. These numbers can be reconfigured in the plugin settings page of the user profile menu.
 
 One widget gives a single number representing the maximum number of concurrent users that have ever occurred in the N time interval over the last M days.
 The other two widgets are a line graph and a table showing the maximum concurrent visitors for each N time slice of 24 hours over the last M days.
 
-The plugin was derived from the Barometer plugin built by [@halfdan](http://github.com/halfdan) which much of the structure and SQL queries are from.
+The plugin borrows the code structure and an SQL query from the Barometer plugin built by [@halfdan](http://github.com/halfdan).
 
 
 ## Documentation
@@ -19,7 +18,7 @@ The plugin was derived from the Barometer plugin built by [@halfdan](http://gith
 
    ```
    cd plugins/
-   git clone https://github.com/mikekerr247/piwik-concurrent-users-plugin.git MaxConcurrent
+   git clone https://github.com/mikekerr247/MaxConcurrent.git MaxConcurrent
    ```
 
 2. Login as superuser into your Piwik installation and activate the plugin under Settings -> Plugins
