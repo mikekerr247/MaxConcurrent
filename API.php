@@ -9,10 +9,8 @@
 namespace Piwik\Plugins\MaxConcurrent;
 
 use Piwik\DataTable;
-use Piwik\DataTable\Row;
 use Piwik\Date;
 use Piwik\Piwik;
-use Piwik\Period;
 
 /**
  * API for plugin MaxConcurrent
@@ -32,6 +30,7 @@ class API extends \Piwik\Plugin\API
      */
     public function getMaxConcurrentUsers($idSite, $period, $date)
     {
+        /* get the user defined plugin settings */
         $settings = new Settings('MaxConcurrent');
         $lastDays = $settings->lastDays->getValue();
         $lastMinutes = $settings->timeInterval->getValue();
@@ -40,7 +39,8 @@ class API extends \Piwik\Plugin\API
         $refNow = Date::factory('now');
         
         $timeLimit = $refNow->subDay($lastDays)->toString('Y-m-d H:i:s');
-
+        
+        /* returns a single maximum value of concurrent usage in the time interval */
         $sql =  "SELECT MAX(g.concurrent) as maxbin, g.time as visittime
                  FROM (
                         SELECT COUNT(idvisitor) as concurrent, round(UNIX_TIMESTAMP(visit_last_action_time) / ?) as time 
@@ -61,6 +61,7 @@ class API extends \Piwik\Plugin\API
 
     public function getAllConcurrentUsers($idSite, $period, $date)
     {
+        /* get the user defined plugin settings */
         $settings = new Settings('MaxConcurrent');
         $lastDays = $settings->lastDays->getValue();
         $lastMinutes = $settings->timeInterval->getValue();
@@ -68,7 +69,8 @@ class API extends \Piwik\Plugin\API
         $refNow = Date::factory('now');
         
         $timeLimit = $refNow->subDay($lastDays)->toString('Y-m-d H:i:s');
-
+        
+        /* returns the maximum concurrent usage in every time slice of 24 hours */
         $sql =  "SELECT MAX(g.concurrent) as maxbin, round((((g.time * ? * 60) % 86400) / 3600), 2) as xAxisLabel
                  FROM (
                         SELECT COUNT(idvisitor) as concurrent, round(UNIX_TIMESTAMP(visit_last_action_time) / ?) as time 
