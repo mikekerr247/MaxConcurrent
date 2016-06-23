@@ -8,6 +8,7 @@
 
 namespace Piwik\Plugins\MaxConcurrent;
 
+use Piwik\Piwik;
 use Piwik\View;
 use Piwik\WidgetsList;
 use Piwik\ViewDataTable\Factory as ViewDataTableFactory;
@@ -22,9 +23,9 @@ class Widgets extends \Piwik\Plugin\Widgets
 
     protected function init()
     {
-         $this->addWidget('Maximum Concurrent Users', $method = 'maxConcurrentUsage');
-         $this->addWidget('Concurrent Usage By Time Span Graph', $method = 'lineGraph');
-         $this->addWidget('Concurrent Usage By Time Span Table', $method = 'tableView');
+         $this->addWidget(Piwik::translate('MaxConcurrent_MaxUsers'), $method = 'maxConcurrentUsage');
+         $this->addWidget(Piwik::translate('MaxConcurrent_ConcurrentUsageGraph'), $method = 'lineGraph');
+         $this->addWidget(Piwik::translate('MaxConcurrent_ConcurrentUsageTable'), $method = 'tableView');
 
     }
 
@@ -46,7 +47,7 @@ class Widgets extends \Piwik\Plugin\Widgets
 
          $view = ViewDataTableFactory::build('graphEvolution', 'MaxConcurrent.getAllConcurrentUsers', $controllerAction = 'MaxConcurrent.lineGraph');
          $view->config->selectable_columns = array();
-         $view->config->translations['value'] = "Visits";
+         $view->config->translations['value'] = Piwik::translate('MaxConcurrent_Visitors');
          $view->config->max_graph_elements = 289;
          $view->config->show_exclude_low_population = false;
          $view->config->show_table_all_columns = false;
@@ -69,8 +70,8 @@ class Widgets extends \Piwik\Plugin\Widgets
     {
 
          $view = ViewDataTableFactory::build('table', 'MaxConcurrent.getAllConcurrentUsers', $controllerAction = 'MaxConcurrent.tableView');
-        $view->config->translations['value'] = 'Visits';
-        $view->config->translations['label'] = 'Hour';
+        $view->config->translations['value'] = Piwik::translate('MaxConcurrent_Visitors');
+        $view->config->translations['label'] = Piwik::translate('MaxConcurrent_Hour');
         $view->requestConfig->filter_sort_column = 'label';
         $view->requestConfig->filter_sort_order = 'asc';
         $view->requestConfig->filter_limit = 100;

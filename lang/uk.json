@@ -1,0 +1,16 @@
+{
+	"MaxConcurrent": {
+		"MaxUsers": "",
+		"Visitors": "Відвідувачі",
+		"ConcurrentUsageGraph": "",
+		"ConcurrentUsageTable": "",
+		"Hour": "годин",
+		"SettingsIntro": "",
+		"TimeInterval": "",
+		"TimeIntervalDescription": "",
+		"TimeIntervalHint": "",
+		"LastDays": "",
+		"LastDaysDescription": "",
+		"LastDaysHint": ""
+	}
+}

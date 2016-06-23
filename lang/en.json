@@ -1,0 +1,17 @@
+{
+	"MaxConcurrent": {
+		"MaxUsers": "Maximum Concurrent Users",
+		"ConcurrentUsageGraph": "Concurrent Usage Graph",
+		"ConcurrentUsageTable": "Concurrent Usage Table",
+		"Visitors": "Visitors",
+		"Hour": "Hour",
+		"SettingsIntro": "Here you can configure the settings for the MaxConcurrent plugin",
+		"TimeInterval": "Time Interval",
+		"TimeIntervalDescription": "Defines the length of the time intervals in minutes ",
+		"TimeIntervalHint": "Enter a number which is <= 86400",
+		"LastDays": "Last Days",
+		"LastDaysDescription": "Defines how long ago from today should be examined in days ",
+		"LastDaysHint": "Enter a number which is > 0"
+		
+	}
+}
