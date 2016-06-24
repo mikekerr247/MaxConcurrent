@@ -1,16 +1,17 @@
 {
 	"MaxConcurrent": {
-		"MaxUsers": "",
+		"MaxUsers": "Максимальна к-сть одночасних відвідувачів",
+		"ConcurrentUsageGraph": "Графік максимального онлайну по часу",
+		"ConcurrentUsageTable": "Таблиця максимального онлайну по часу",
 		"Visitors": "Відвідувачі",
-		"ConcurrentUsageGraph": "",
-		"ConcurrentUsageTable": "",
 		"Hour": "годин",
-		"SettingsIntro": "",
-		"TimeInterval": "",
-		"TimeIntervalDescription": "",
-		"TimeIntervalHint": "",
-		"LastDays": "",
-		"LastDaysDescription": "",
-		"LastDaysHint": ""
+		"SettingsIntro": "Тут ви можете налаштувати параметри для плагіна MaxConcurrent",
+		"TimeInterval": "Часовий інтервал",
+		"TimeIntervalDescription": "Визначає тривалість інтервалів часу в хвилинах ",
+		"TimeIntervalHint": "Введіть номер, який <= 86400",
+		"LastDays": "Останні дні",
+		"LastDaysDescription": "Defines how long ago from today should be examined in days ",
+		"LastDaysHint": "Введіть число, яке більше 0"
+		
 	}
 }
