@@ -48,7 +48,7 @@ class Widgets extends \Piwik\Plugin\Widgets
          $view = ViewDataTableFactory::build('graphEvolution', 'MaxConcurrent.getAllConcurrentUsers', $controllerAction = 'MaxConcurrent.lineGraph');
          $view->config->selectable_columns = array();
          $view->config->translations['value'] = Piwik::translate('MaxConcurrent_Visitors');
-         $view->config->max_graph_elements = 289;
+         $view->config->max_graph_elements = 1440;
          $view->config->show_exclude_low_population = false;
          $view->config->show_table_all_columns = false;
          $view->config->disable_row_evolution  = true;
@@ -79,7 +79,7 @@ class Widgets extends \Piwik\Plugin\Widgets
         $view->config->show_exclude_low_population = false;
         $view->config->show_table_all_columns = false;
         $view->config->disable_row_evolution  = true;
-        $view->config->max_graph_elements = 288;
+        $view->config->max_graph_elements = 1440;
         $view->config->show_search = false;
          return $view->render();
     }
