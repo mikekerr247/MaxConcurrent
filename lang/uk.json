@@ -8,9 +8,9 @@
 		"SettingsIntro": "Тут ви можете налаштувати параметри для плагіна MaxConcurrent",
 		"TimeInterval": "Часовий інтервал",
 		"TimeIntervalDescription": "Визначає тривалість інтервалів часу в хвилинах ",
-		"TimeIntervalHint": "Введіть номер, який <= 86400",
+		"TimeIntervalHint": "Введіть число, яке <= 86400",
 		"LastDays": "Останні дні",
-		"LastDaysDescription": "Defines how long ago from today should be examined in days ",
+		"LastDaysDescription": "Визначає, як давно з сьогоднішнього дня повинні бути розглянуті дані  в днях ",
 		"LastDaysHint": "Введіть число, яке більше 0"
 		
 	}
