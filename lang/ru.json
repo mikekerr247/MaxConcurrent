@@ -1,16 +1,17 @@
 {
 	"MaxConcurrent": {
-		"MaxUsers": "",
+		"MaxUsers": "Максимальное кол-во одновременных посетителей",
+		"ConcurrentUsageGraph": "График максимального онлайна по времени",
+		"ConcurrentUsageTable": "Таблица максимального онлайна по времени",
 		"Visitors": "Посетители",
-		"ConcurrentUsageGraph": "",
-		"ConcurrentUsageTable": "",
 		"Hour": "час",
-		"SettingsIntro": "",
-		"TimeInterval": "",
-		"TimeIntervalDescription": "",
-		"TimeIntervalHint": "",
-		"LastDays": "",
-		"LastDaysDescription": "",
-		"LastDaysHint": ""
+		"SettingsIntro": "Здесь вы можете настроить параметры для плагина MaxConcurrent",
+		"TimeInterval": "Временной интервал",
+		"TimeIntervalDescription": "Определяет длительность интервалов времени в минутах ",
+		"TimeIntervalHint": "Введите число, которое  <= 86400",
+		"LastDays": "Последние дни",
+		"LastDaysDescription": "Определяет, как давно с сегодняшнего дня, данные должны быть рассмотрены в днях ",
+		"LastDaysHint": "Введите число, которое больше 0"
+		
 	}
 }
