@@ -11,7 +11,7 @@ The other two widgets are a line graph and a table showing the maximum concurren
 
 The plugin borrows the code structure and an SQL query from the Barometer plugin built by [@halfdan](http://github.com/halfdan).
 
-The plugin has also been translated into Ukrainian and Russian by [@twixi]
+The plugin has also been translated into Ukrainian and Russian by twixi
 
 
 ## Documentation
