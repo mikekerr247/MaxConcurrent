@@ -1,6 +1,6 @@
 {
   "name": "MaxConcurrent",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Reports maximum concurrent visitors in a time interval",
   "theme": false,
   "require": {
