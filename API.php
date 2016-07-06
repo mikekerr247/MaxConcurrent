@@ -85,7 +85,7 @@ class API extends \Piwik\Plugin\API
 
         $convisits = array();
             foreach ($rows as $row){
-                $convisits[(string)$row['xAxisLabel'] . 'h'] = $row['maxbin'];
+                $convisits[(string)$row['xAxisLabel'] . Piwik::translate('MaxConcurrent_HourShort')] = $row['maxbin'];
             }
 
         $table = DataTable::makeFromIndexedArray($convisits);

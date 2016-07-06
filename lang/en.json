@@ -11,7 +11,8 @@
 		"TimeIntervalHint": "Enter a number which is <= 86400",
 		"LastDays": "Last Days",
 		"LastDaysDescription": "Defines how long ago from today should be examined in days ",
-		"LastDaysHint": "Enter a number which is > 0"
+		"LastDaysHint": "Enter a number which is > 0",
+		"HourShort": "h"
 		
 	}
 }
