@@ -8,6 +8,7 @@
 
 namespace Piwik\Plugins\MaxConcurrent;
 
+use Piwik\Access;
 use Piwik\DataTable;
 use Piwik\Date;
 use Piwik\Piwik;
@@ -31,7 +32,7 @@ class API extends \Piwik\Plugin\API
     public function getMaxConcurrentUsers($idSite, $period, $date)
     {
         Piwik::checkUserHasViewAccess($idSite);
-        $settings = new Settings('MaxConcurrent');
+        $settings = new \Piwik\Plugins\MaxConcurrent\UserSettings();
         $lastDays = $settings->lastDays->getValue();
         $lastMinutes = $settings->timeInterval->getValue();
 
@@ -61,7 +62,7 @@ class API extends \Piwik\Plugin\API
     public function getAllConcurrentUsers($idSite, $period, $date)
     {
         Piwik::checkUserHasViewAccess($idSite);
-        $settings = new Settings('MaxConcurrent');
+        $settings = new \Piwik\Plugins\MaxConcurrent\UserSettings();
         $lastDays = $settings->lastDays->getValue();
         $lastMinutes = $settings->timeInterval->getValue();
 
